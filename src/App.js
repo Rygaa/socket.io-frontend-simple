@@ -3,7 +3,7 @@ import './App.css';
 
 import socketIOClient from "socket.io-client";
 import { useEffect } from 'react';
-export const socket = socketIOClient('ws://localhost:3005', {
+export const socket = socketIOClient('ws://api.hanasu.me', {
   path: '/mysocket/'
 });
 
