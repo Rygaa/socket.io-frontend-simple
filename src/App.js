@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import socketIOClient from "socket.io-client";
-export const socket = socketIOClient('ws://api.hanasu.me', {
+import { useEffect } from 'react';
+export const socket = socketIOClient('ws://localhost:3005', {
   path: '/mysocket/'
 });
 
@@ -14,7 +15,7 @@ function App() {
     socket.on('connected', (socketId) => {
       console.log('connected with server as socket:', socketId)
     })
-    
+
   }, [])
   return (
     <div>
